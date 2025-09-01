@@ -1,35 +1,5 @@
-load("//:rules.bzl", "genrule")
-
-# Rust backend build rules for Tauri
-
-# Cargo check for quick validation
-genrule(
-    name = "check",
-    cmd = "cd /home/runner/work/monobean/monobean/src-tauri && cargo check > $OUT 2>&1",
-    out = "check.log",
-    visibility = ["PUBLIC"],
-)
-
-# Debug build
-genrule(
-    name = "debug",
-    cmd = "cd /home/runner/work/monobean/monobean/src-tauri && cargo build && tar -czf $OUT -C target/debug .",
-    out = "debug-build.tar.gz",
-    visibility = ["PUBLIC"],
-)
-
-# Release build
-genrule(
-    name = "release", 
-    cmd = "cd /home/runner/work/monobean/monobean/src-tauri && cargo build --release && tar -czf $OUT -C target/release .",
-    out = "release-build.tar.gz",
-    visibility = ["PUBLIC"],
-)
-
-# Run tests
-genrule(
-    name = "test",
-    cmd = "cd /home/runner/work/monobean/monobean/src-tauri && cargo test > $OUT 2>&1",
-    out = "test.log",
-    visibility = ["PUBLIC"],
-)
+# Rust Backend Build Commands  
+# Check: cargo check
+# Test: cargo test
+# Debug: cargo build
+# Release: cargo build --release

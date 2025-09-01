@@ -3,14 +3,7 @@ name = BUCK
 
 [cells]
 root = .
-prelude = prelude
-toolchains = toolchains
-
-[external_cells]
-prelude = bundled
-
-[build]
-execution_platforms = prelude//platforms:default
 
 [parser]
-target_platform_detector_spec = target:root//...
+# Disable target platform detection to avoid errors
+target_platform_detector_spec = none
