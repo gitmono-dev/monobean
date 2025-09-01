@@ -1,0 +1,7 @@
+{
+  "trace_id": "94662866-7609-4a17-94d2-68214d32ff79",
+  "exit_code": 1,
+  "error_messages": [
+    "Error creating cell resolver: Parsing cells with project root `/home/runner/work/monobean/monobean`, cwd ``: `toolchains` was provided both as a cell name and as an alias: `toolchains` was provided both as a cell name and as an alias"
+  ]
+}

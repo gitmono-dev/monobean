@@ -1,0 +1,19 @@
+load("//:rules.bzl", "genrule")
+
+# Frontend React/TypeScript build rules
+
+# TypeScript compilation
+genrule(
+    name = "typescript",
+    cmd = "cd /home/runner/work/monobean/monobean && npx tsc && echo 'TypeScript compiled successfully' > $OUT",
+    out = "tsc.log",
+    visibility = ["PUBLIC"],
+)
+
+# Vite build for production
+genrule(
+    name = "vite-build", 
+    cmd = "cd /home/runner/work/monobean/monobean && npx vite build && tar -czf $OUT -C dist .",
+    out = "vite-dist.tar.gz",
+    visibility = ["PUBLIC"],
+)

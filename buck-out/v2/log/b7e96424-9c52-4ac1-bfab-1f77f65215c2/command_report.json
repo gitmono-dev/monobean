@@ -1,0 +1,7 @@
+{
+  "trace_id": "b7e96424-9c52-4ac1-bfab-1f77f65215c2",
+  "exit_code": 1,
+  "error_messages": [
+    "Error creating cell resolver: Parsing cells with project root `/home/runner/work/monobean/monobean`, cwd ``: Cell name `prelude` should be an alias for an existing cell, but `prelude` isn't a known alias: Cell name `prelude` should be an alias for an existing cell, but `prelude` isn't a known alias"
+  ]
+}
